@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SEO & Web Accessibility | Payal Makani</title>
+
+<meta name="description" content="Explore SEO and web accessibility concepts through an attractive, responsive and accessible webpage.">
+<meta name="keywords" content="SEO, web accessibility, semantic HTML, HTML5, Bootstrap, web designing">
+<meta name="author" content="Payal Makani">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#5b5ce2">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body{
+margin:0;
+font-family:Arial,sans-serif;
+color:#fff;
+line-height:1.7;
+background:
+radial-gradient(circle at 15% 20%,rgba(0,212,255,.25),transparent 30%),
+radial-gradient(circle at 85% 25%,rgba(124,58,237,.28),transparent 30%),
+radial-gradient(circle at 50% 90%,rgba(236,72,153,.18),transparent 35%),
+linear-gradient(135deg,#050816,#0b1228,#111827);
+background-attachment:fixed;
+overflow-x:hidden;
+transition:.4s;
+}
+
+body:before{
+content:"";
+position:fixed;
+width:280px;
+height:280px;
+border-radius:50%;
+background:rgba(0,212,255,.18);
+filter:blur(80px);
+top:10%;
+left:5%;
+z-index:-1;
+animation:moveGlow 7s infinite alternate ease-in-out;
+}
+
+body:after{
+content:"";
+position:fixed;
+width:320px;
+height:320px;
+border-radius:50%;
+background:rgba(168,85,247,.18);
+filter:blur(90px);
+right:5%;
+bottom:5%;
+z-index:-1;
+animation:moveGlow 9s infinite alternate-reverse ease-in-out;
+}
+
+@keyframes moveGlow{
+from{transform:translate(0,0) scale(1)}
+to{transform:translate(50px,-40px) scale(1.15)}
+}
+
+.navbar{
+background:rgba(8,11,26,.75)!important;
+backdrop-filter:blur(18px);
+border-bottom:1px solid rgba(255,255,255,.12);
+}
+
+.logo{
+font-size:25px;
+font-weight:800;
+background:linear-gradient(90deg,#8b5cf6,#ec4899);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+.nav-link{
+color:#ddd!important;
+margin:0 7px;
+transition:.3s;
+}
+
+.nav-link:hover,
+.nav-link:focus{
+color:#c084fc!important;
+transform:translateY(-2px);
+}
+
+.hero{
+min-height:90vh;
+display:flex;
+align-items:center;
+text-align:center;
+padding:80px 20px;
+position:relative;
+}
+
+.hero h1{
+font-size:clamp(40px,7vw,75px);
+font-weight:900;
+line-height:1.1;
+}
+
+.gradient{
+background:linear-gradient(90deg,#8b5cf6,#ec4899,#38bdf8);
+-webkit-background-clip:text;
+color:transparent;
+background-size:200%;
+animation:gradientMove 4s infinite alternate;
+}
+
+@keyframes gradientMove{
+from{background-position:0%}
+to{background-position:100%}
+}
+
+.hero p{
+max-width:750px;
+margin:25px auto;
+color:#b9bfd3;
+font-size:19px;
+}
+
+.btn-main{
+background:linear-gradient(90deg,#6366f1,#d946ef);
+border:0;
+color:#fff;
+font-weight:700;
+padding:13px 28px;
+border-radius:30px;
+box-shadow:0 10px 30px rgba(99,102,241,.3);
+transition:.3s;
+}
+
+.btn-main:hover{
+transform:translateY(-4px) scale(1.03);
+color:#fff;
+box-shadow:0 15px 35px rgba(217,70,239,.35);
+}
+
+.btn-outline{
+border:1px solid rgba(255,255,255,.25);
+color:#fff;
+border-radius:30px;
+padding:12px 25px;
+transition:.3s;
+}
+
+.btn-outline:hover{
+background:rgba(255,255,255,.1);
+color:#fff;
+transform:translateY(-3px);
+}
+
+.glass{
+background:rgba(255,255,255,.065);
+border:1px solid rgba(255,255,255,.13);
+border-radius:24px;
+backdrop-filter:blur(18px);
+box-shadow:0 20px 50px rgba(0,0,0,.25);
+}
+
+.section{
+padding:90px 0;
+}
+
+.section-title{
+font-size:42px;
+font-weight:800;
+margin-bottom:45px;
+}
+
+.info-card{
+padding:32px;
+height:100%;
+transition:.4s;
+position:relative;
+overflow:hidden;
+}
+
+.info-card:before{
+content:"";
+position:absolute;
+width:100px;
+height:100px;
+background:#8b5cf6;
+filter:blur(60px);
+opacity:.25;
+right:-30px;
+top:-30px;
+}
+
+.info-card:hover{
+transform:translateY(-10px) scale(1.02);
+border-color:rgba(192,132,252,.6);
+box-shadow:0 20px 50px rgba(99,102,241,.18);
+}
+
+.info-card i{
+font-size:45px;
+color:#c084fc;
+}
+
+.info-card h3{
+font-weight:700;
+}
+
+.info-card p,
+.info-card li{
+color:#b9bfd3;
+}
+
+.feature-icon{
+width:70px;
+height:70px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:20px;
+background:linear-gradient(135deg,#6366f1,#d946ef);
+margin:auto;
+box-shadow:0 10px 25px rgba(99,102,241,.25);
+transition:.4s;
+}
+
+.info-card:hover .feature-icon{
+transform:rotate(8deg) scale(1.1);
+}
+
+.feature-icon i{
+font-size:32px;
+color:#fff;
+}
+
+.check{
+color:#a78bfa;
+margin-right:8px;
+}
+
+.demo{
+padding:35px;
+}
+
+.code-box{
+background:#070914;
+border-radius:15px;
+padding:25px;
+border:1px solid rgba(255,255,255,.1);
+overflow:auto;
+}
+
+.code-box code{
+color:#c4b5fd;
+}
+
+.progress{
+height:10px;
+background:rgba(255,255,255,.1);
+border-radius:20px;
+overflow:hidden;
+}
+
+.progress-bar{
+background:linear-gradient(90deg,#6366f1,#d946ef,#38bdf8);
+width:0;
+transition:2s;
+}
+
+.stats{
+padding:35px 15px;
+text-align:center;
+}
+
+.stat-number{
+font-size:45px;
+font-weight:900;
+background:linear-gradient(90deg,#38bdf8,#c084fc,#ec4899);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+.stat-label{
+color:#b9bfd3;
+}
+
+.reveal{
+opacity:0;
+transform:translateY(50px);
+transition:1s;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+footer{
+padding:45px 20px;
+text-align:center;
+color:#8f96aa;
+border-top:1px solid rgba(255,255,255,.1);
+}
+
+.skip-link{
+position:absolute;
+top:-60px;
+left:15px;
+background:#fff;
+color:#111;
+padding:10px 18px;
+z-index:9999;
+border-radius:8px;
+font-weight:bold;
+}
+
+.skip-link:focus{
+top:15px;
+}
+
+:focus-visible{
+outline:3px solid #f0abfc;
+outline-offset:4px;
+}
+
+#topBtn{
+position:fixed;
+right:25px;
+bottom:25px;
+width:48px;
+height:48px;
+border:0;
+border-radius:50%;
+background:linear-gradient(135deg,#6366f1,#d946ef);
+color:#fff;
+font-size:20px;
+display:none;
+z-index:999;
+box-shadow:0 8px 25px rgba(99,102,241,.4);
+transition:.3s;
+}
+
+#topBtn:hover{
+transform:translateY(-5px) scale(1.1);
+}
+
+#themeBtn{
+position:fixed;
+right:25px;
+bottom:85px;
+width:48px;
+height:48px;
+border:0;
+border-radius:50%;
+background:rgba(255,255,255,.1);
+color:#fff;
+font-size:20px;
+z-index:999;
+backdrop-filter:blur(10px);
+transition:.3s;
+}
+
+#themeBtn:hover{
+transform:rotate(20deg) scale(1.1);
+}
+
+.toast-custom{
+background:rgba(20,20,35,.95);
+color:#fff;
+border:1px solid rgba(255,255,255,.15);
+}
+
+@media(max-width:768px){
+.hero{
+min-height:80vh;
+padding:60px 20px;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.section{
+padding:60px 0;
+}
+
+.section-title{
+font-size:34px;
+}
+
+.info-card{
+padding:25px;
+}
+
+#topBtn,
+#themeBtn{
+right:15px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<header>
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" aria-label="Main navigation">
+
+<div class="container">
+
+<a class="navbar-brand logo" href="#home" aria-label="Payal Web home">
+Payal Web
+</a>
+
+<button class="navbar-toggler"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#navMenu"
+aria-controls="navMenu"
+aria-expanded="false"
+aria-label="Open navigation menu">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse" id="navMenu">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="#home">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#seo">SEO</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#accessibility">Accessibility</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#features">Features</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#stats">Stats</a>
+</li>
+
+</ul>
+
+</div>
+</div>
+</nav>
+</header>
+
+<main id="main-content">
+
+<section class="hero" id="home" aria-labelledby="main-heading">
+
+<div class="container">
+
+<div class="mb-4">
+<span class="badge rounded-pill text-bg-dark px-3 py-2">
+<i class="bi bi-stars" aria-hidden="true"></i>
+Web Designing
+</span>
+</div>
+
+<h1 id="main-heading">
+Build Better Websites with
+<span class="gradient">SEO & Accessibility</span>
+</h1>
+
+<p>
+Create websites that are beautiful, searchable, responsive and accessible to everyone.
+</p>
+
+<div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
+
+<a href="#seo" class="btn btn-main">
+<i class="bi bi-rocket-takeoff" aria-hidden="true"></i>
+Explore SEO
+</a>
+
+<a href="#accessibility" class="btn btn-outline">
+<i class="bi bi-universal-access" aria-hidden="true"></i>
+Accessibility
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="seo" aria-labelledby="seo-heading">
+
+<div class="container">
+
+<h2 id="seo-heading" class="text-center section-title">
+Why <span class="gradient">SEO</span> Matters
+</h2>
+
+<div class="row g-4">
+
+<article class="col-md-4 reveal">
+
+<div class="glass info-card text-center">
+
+<div class="feature-icon">
+<i class="bi bi-search" aria-hidden="true"></i>
+</div>
+
+<h3 class="mt-4">Meta Tags</h3>
+
+<p>
+Title, description, keywords and author information help search engines understand webpage content.
+</p>
+
+</div>
+
+</article>
+
+<article class="col-md-4 reveal">
+
+<div class="glass info-card text-center">
+
+<div class="feature-icon">
+<i class="bi bi-code-slash" aria-hidden="true"></i>
+</div>
+
+<h3 class="mt-4">Semantic HTML</h3>
+
+<p>
+Semantic elements provide a meaningful structure that improves both SEO and accessibility.
+</p>
+
+</div>
+
+</article>
+
+<article class="col-md-4 reveal">
+
+<div class="glass info-card text-center">
+
+<div class="feature-icon">
+<i class="bi bi-graph-up-arrow" aria-hidden="true"></i>
+</div>
+
+<h3 class="mt-4">Better Visibility</h3>
+
+<p>
+Well-organized content helps search engines crawl and understand the webpage more effectively.
+</p>
+
+</div>
+
+</article>
+
+</div>
+</div>
+</section>
+
+<section class="section" id="accessibility" aria-labelledby="accessibility-heading">
+
+<div class="container">
+
+<h2 id="accessibility-heading" class="text-center section-title">
+Designed for <span class="gradient">Everyone</span>
+</h2>
+
+<div class="row g-4">
+
+<article class="col-md-6 reveal">
+
+<div class="glass info-card">
+
+<div class="feature-icon">
+<i class="bi bi-universal-access" aria-hidden="true"></i>
+</div>
+
+<h3 class="mt-4">Accessible Navigation</h3>
+
+<ul class="list-unstyled mt-3">
+
+<li>
+<span class="check">✓</span>
+Keyboard-friendly navigation
+</li>
+
+<li>
+<span class="check">✓</span>
+Skip-to-content link
+</li>
+
+<li>
+<span class="check">✓</span>
+Descriptive navigation links
+</li>
+
+<li>
+<span class="check">✓</span>
+Visible keyboard focus
+</li>
+
+</ul>
+
+</div>
+</article>
+
+<article class="col-md-6 reveal">
+
+<div class="glass info-card">
+
+<div class="feature-icon">
+<i class="bi bi-eye" aria-hidden="true"></i>
+</div>
+
+<h3 class="mt-4">Readable Content</h3>
+
+<ul class="list-unstyled mt-3">
+
+<li>
+<span class="check">✓</span>
+Proper heading hierarchy
+</li>
+
+<li>
+<span class="check">✓</span>
+Clear text structure
+</li>
+
+<li>
+<span class="check">✓</span>
+Good color contrast
+</li>
+
+<li>
+<span class="check">✓</span>
+ARIA labels
+</li>
+
+</ul>
+
+</div>
+</article>
+
+</div>
+</div>
+</section>
+
+<section class="section" id="features" aria-labelledby="features-heading">
+
+<div class="container">
+
+<h2 id="features-heading" class="text-center section-title">
+Optimization <span class="gradient">Checklist</span>
+</h2>
+
+<div class="glass demo reveal">
+
+<div class="row g-5">
+
+<div class="col-md-6">
+
+<h3>
+<i class="bi bi-search-heart gradient" aria-hidden="true"></i>
+SEO Checklist
+</h3>
+
+<div class="mt-4">
+
+<p>Semantic HTML</p>
+
+<div class="progress mb-3">
+<div class="progress-bar" data-width="95%"></div>
+</div>
+
+<p>Meta Information</p>
+
+<div class="progress mb-3">
+<div class="progress-bar" data-width="90%"></div>
+</div>
+
+<p>Heading Structure</p>
+
+<div class="progress mb-3">
+<div class="progress-bar" data-width="95%"></div>
+</div>
+
+</div>
+</div>
+
+<div class="col-md-6">
+
+<h3>
+<i class="bi bi-universal-access gradient" aria-hidden="true"></i>
+Accessibility
+</h3>
+
+<div class="mt-4">
+
+<p>Keyboard Navigation</p>
+
+<div class="progress mb-3">
+<div class="progress-bar" data-width="95%"></div>
+</div>
+
+<p>Readable Content</p>
+
+<div class="progress mb-3">
+<div class="progress-bar" data-width="90%"></div>
+</div>
+
+<p>Accessible Structure</p>
+
+<div class="progress mb-3">
+<div class="progress-bar" data-width="95%"></div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</section>
+
+<section class="section" id="stats" aria-labelledby="stats-heading">
+
+<div class="container">
+
+<h2 id="stats-heading" class="text-center section-title">
+Website <span class="gradient">Statistics</span>
+</h2>
+
+<div class="row g-4">
+
+<div class="col-md-3 col-6 reveal">
+<div class="glass stats">
+<div class="stat-number counter" data-target="95">0</div>
+<div class="stat-label">SEO Score</div>
+</div>
+</div>
+
+<div class="col-md-3 col-6 reveal">
+<div class="glass stats">
+<div class="stat-number counter" data-target="95">0</div>
+<div class="stat-label">Accessibility</div>
+</div>
+</div>
+
+<div class="col-md-3 col-6 reveal">
+<div class="glass stats">
+<div class="stat-number counter" data-target="100">0</div>
+<div class="stat-label">Responsive</div>
+</div>
+</div>
+
+<div class="col-md-3 col-6 reveal">
+<div class="glass stats">
+<div class="stat-number counter" data-target="24">0</div>
+<div class="stat-label">Features</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="section" aria-labelledby="structure-heading">
+
+<div class="container">
+
+<h2 id="structure-heading" class="text-center section-title">
+Semantic HTML Structure
+</h2>
+
+<div class="glass demo reveal">
+
+<div class="code-box">
+
+<code>
+&lt;header&gt;<br>
+&nbsp;&nbsp;&lt;nav&gt;Navigation&lt;/nav&gt;<br>
+&lt;/header&gt;<br><br>
+
+&lt;main&gt;<br>
+&nbsp;&nbsp;&lt;section&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;article&gt;Content&lt;/article&gt;<br>
+&nbsp;&nbsp;&lt;/section&gt;<br>
+&lt;/main&gt;<br><br>
+
+&lt;footer&gt;Footer Content&lt;/footer&gt;
+</code>
+
+</div>
+
+<p class="text-center mt-4 mb-0">
+Semantic HTML creates a meaningful structure for both
+<strong>search engines</strong> and
+<strong>assistive technologies</strong>.
+</p>
+
+</div>
+</div>
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<div class="glass demo text-center reveal">
+
+<i class="bi bi-lightning-charge-fill gradient fs-1" aria-hidden="true"></i>
+
+<h2 class="mt-3">Interactive Web Design</h2>
+
+<p>
+This webpage combines SEO, accessibility, responsive design,
+animations and interactive JavaScript features.
+</p>
+
+<button id="testBtn" class="btn btn-main">
+<i class="bi bi-magic" aria-hidden="true"></i>
+Test Interaction
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<footer>
+
+<p class="mb-2">
+<i class="bi bi-code-square" aria-hidden="true"></i>
+<strong>Payal Makani</strong> | Web Designing Experiment 4
+</p>
+
+<p class="mb-0">
+SEO Optimized • Accessible • Responsive • Interactive
+</p>
+
+</footer>
+
+<button id="themeBtn" type="button" aria-label="Toggle light and dark mode">
+<i class="bi bi-sun-fill" id="themeIcon"></i>
+</button>
+
+<button id="topBtn" type="button" aria-label="Back to top">
+<i class="bi bi-arrow-up"></i>
+</button>
+
+<div class="toast-container position-fixed bottom-0 start-50 translate-middle-x p-3">
+
+<div id="liveToast" class="toast toast-custom" role="status" aria-live="polite">
+
+<div class="toast-header">
+<i class="bi bi-check-circle-fill text-success me-2"></i>
+<strong class="me-auto">Payal Web</strong>
+<small>Now</small>
+
+<button type="button"
+class="btn-close"
+data-bs-dismiss="toast"
+aria-label="Close">
+</button>
+
+</div>
+
+<div class="toast-body">
+Great! The interactive feature is working successfully.
+</div>
+
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+const revealElements=document.querySelectorAll(".reveal");
+
+const revealObserver=new IntersectionObserver((entries)=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("active");
+}
+});
+},{threshold:.15});
+
+revealElements.forEach(el=>revealObserver.observe(el));
+
+
+const progressBars=document.querySelectorAll(".progress-bar");
+
+const progressObserver=new IntersectionObserver((entries)=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+const width=entry.target.getAttribute("data-width");
+entry.target.style.width=width;
+}
+});
+},{threshold:.5});
+
+progressBars.forEach(bar=>progressObserver.observe(bar));
+
+
+const counters=document.querySelectorAll(".counter");
+
+const counterObserver=new IntersectionObserver((entries)=>{
+entries.forEach(entry=>{
+
+if(entry.isIntersecting && !entry.target.classList.contains("counted")){
+
+entry.target.classList.add("counted");
+
+const target=Number(entry.target.dataset.target);
+let current=0;
+
+const updateCounter=()=>{
+const step=Math.max(1,Math.ceil(target/50));
+current+=step;
+
+if(current>=target){
+entry.target.textContent=target+"%";
+return;
+}
+
+entry.target.textContent=current+"%";
+requestAnimationFrame(updateCounter);
+};
+
+updateCounter();
+
+}
+});
+},{threshold:.5});
+
+counters.forEach(counter=>counterObserver.observe(counter));
+
+
+const topBtn=document.getElementById("topBtn");
+
+window.addEventListener("scroll",()=>{
+if(window.scrollY>400){
+topBtn.style.display="block";
+}else{
+topBtn.style.display="none";
+}
+});
+
+topBtn.addEventListener("click",()=>{
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+});
+
+
+const themeBtn=document.getElementById("themeBtn");
+const themeIcon=document.getElementById("themeIcon");
+
+let lightMode=false;
+
+themeBtn.addEventListener("click",()=>{
+
+lightMode=!lightMode;
+
+if(lightMode){
+
+document.body.style.color="#111827";
+
+document.body.style.background=
+"linear-gradient(135deg,#eef2ff,#fdf4ff,#e0f2fe)";
+
+document.querySelectorAll(".glass").forEach(card=>{
+card.style.background="rgba(255,255,255,.65)";
+card.style.color="#111827";
+});
+
+document.querySelectorAll(".info-card p,.info-card li,.hero p,.stat-label").forEach(el=>{
+el.style.color="#374151";
+});
+
+themeIcon.className="bi bi-moon-fill";
+
+}else{
+
+document.body.style.color="#fff";
+
+document.body.style.background=
+"radial-gradient(circle at 15% 20%,rgba(0,212,255,.25),transparent 30%),radial-gradient(circle at 85% 25%,rgba(124,58,237,.28),transparent 30%),radial-gradient(circle at 50% 90%,rgba(236,72,153,.18),transparent 35%),linear-gradient(135deg,#050816,#0b1228,#111827)";
+
+document.querySelectorAll(".glass").forEach(card=>{
+card.style.background="rgba(255,255,255,.065)";
+card.style.color="#fff";
+});
+
+document.querySelectorAll(".info-card p,.info-card li,.hero p,.stat-label").forEach(el=>{
+el.style.color="#b9bfd3";
+});
+
+themeIcon.className="bi bi-sun-fill";
+
+}
+
+});
+
+
+const testBtn=document.getElementById("testBtn");
+
+testBtn.addEventListener("click",()=>{
+
+const toastElement=document.getElementById("liveToast");
+
+const toast=new bootstrap.Toast(toastElement);
+
+toast.show();
+
+});
+
+
+document.querySelectorAll(".nav-link").forEach(link=>{
+
+link.addEventListener("click",()=>{
+
+const menu=document.getElementById("navMenu");
+
+if(menu.classList.contains("show")){
+
+bootstrap.Collapse.getOrCreateInstance(menu).hide();
+
+}
+
+});
+
+});
+
+</script>
+
+</body>
+  </html>
