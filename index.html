@@ -1,699 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEO & Web Accessibility | Payal Makani</title>
+<meta name="description" content="Explore SEO and web accessibility concepts through an attractive, responsive and accessible webpage.">
+<meta name="keywords" content="SEO, web accessibility, semantic HTML, HTML5, Bootstrap, web designing">
+<meta name="author" content="Payal Makani">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#5b5ce2">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+margin:0;
+font-family:Arial,sans-serif;
+color:#fff;
+line-height:1.7;
+background:
+radial-gradient(circle at 15% 20%,rgba(0,212,255,.25),transparent 30%),
+radial-gradient(circle at 85% 25%,rgba(124,58,237,.28),transparent 30%),
+radial-gradient(circle at 50% 90%,rgba(236,72,153,.18),transparent 35%),
+linear-gradient(135deg,#050816,#0b1228,#111827);
+background-attachment:fixed;
+overflow-x:hidden;
+}
 
-<meta name="description"
-content="Learn how semantic HTML, SEO techniques and accessibility improve modern websites.">
+body:before{
+content:"";
+position:fixed;
+width:280px;
+height:280px;
+border-radius:50%;
+background:rgba(0,212,255,.18);
+filter:blur(80px);
+top:10%;
+left:5%;
+z-index:-1;
+animation:moveGlow 7s infinite alternate ease-in-out;
+}
 
-<meta name="keywords"
-content="SEO, accessibility, HTML5, semantic HTML, web design">
+body:after{
+content:"";
+position:fixed;
+width:320px;
+height:320px;
+border-radius:50%;
+background:rgba(168,85,247,.18);
+filter:blur(90px);
+right:5%;
+bottom:5%;
+z-index:-1;
+animation:moveGlow 9s infinite alternate-reverse ease-in-out;
+}
 
-<meta name="author"
-content="Payal Makani">
-
-<meta name="robots"
-content="index, follow">
-
-<meta name="theme-color"
-content="#17142f">
-
-<title>SEO & Accessibility | Payal Makani</title>
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-rel="stylesheet">
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-rel="stylesheet">
-
-<link rel="stylesheet" href="css/style.css">
-
+@keyframes moveGlow{
+from{transform:translate(0,0) scale(1)}
+to{transform:translate(50px,-40px) scale(1.15)}
+}
+.navbar{background:rgba(8,11,26,.75)!important;backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.12)}
+.logo{font-size:25px;font-weight:800;background:linear-gradient(90deg,#8b5cf6,#ec4899);-webkit-background-clip:text;color:transparent}
+.nav-link{color:#ddd!important;margin:0 7px;transition:.3s}
+.nav-link:hover,.nav-link:focus{color:#c084fc!important;transform:translateY(-2px)}
+.hero{min-height:90vh;display:flex;align-items:center;text-align:center;padding:80px 20px;position:relative}
+.hero h1{font-size:clamp(40px,7vw,75px);font-weight:900;line-height:1.1}
+.gradient{background:linear-gradient(90deg,#8b5cf6,#ec4899,#38bdf8);-webkit-background-clip:text;color:transparent;background-size:200%;animation:gradientMove 4s infinite alternate}
+@keyframes gradientMove{from{background-position:0%}to{background-position:100%}}
+.hero p{max-width:750px;margin:25px auto;color:#b9bfd3;font-size:19px}
+.btn-main{background:linear-gradient(90deg,#6366f1,#d946ef);border:0;color:#fff;font-weight:700;padding:13px 28px;border-radius:30px;box-shadow:0 10px 30px rgba(99,102,241,.3);transition:.3s}
+.btn-main:hover{transform:translateY(-4px) scale(1.03);color:#fff;box-shadow:0 15px 35px rgba(217,70,239,.35)}
+.btn-outline{border:1px solid rgba(255,255,255,.25);color:#fff;border-radius:30px;padding:12px 25px;transition:.3s}
+.btn-outline:hover{background:rgba(255,255,255,.1);color:#fff;transform:translateY(-3px)}
+.glass{background:rgba(255,255,255,.065);border:1px solid rgba(255,255,255,.13);border-radius:24px;backdrop-filter:blur(18px);box-shadow:0 20px 50px rgba(0,0,0,.25)}
+.section{padding:90px 0}
+.section-title{font-size:42px;font-weight:800;margin-bottom:45px}
+.info-card{padding:32px;height:100%;transition:.4s;position:relative;overflow:hidden}
+.info-card:before{content:"";position:absolute;width:100px;height:100px;background:#8b5cf6;filter:blur(60px);opacity:.25;right:-30px;top:-30px}
+.info-card:hover{transform:translateY(-10px);border-color:rgba(192,132,252,.6);box-shadow:0 20px 50px rgba(99,102,241,.18)}
+.info-card i{font-size:45px;color:#c084fc}
+.info-card h3{font-weight:700}
+.info-card p,.info-card li{color:#b9bfd3}
+.feature-icon{width:70px;height:70px;display:flex;align-items:center;justify-content:center;border-radius:20px;background:linear-gradient(135deg,#6366f1,#d946ef);margin:auto;box-shadow:0 10px 25px rgba(99,102,241,.25)}
+.feature-icon i{font-size:32px;color:#fff}
+.check{color:#a78bfa;margin-right:8px}
+.demo{padding:35px}
+.code-box{background:#070914;border-radius:15px;padding:25px;border:1px solid rgba(255,255,255,.1);overflow:auto}
+.code-box code{color:#c4b5fd}
+.progress{height:10px;background:rgba(255,255,255,.1);border-radius:20px}
+.progress-bar{background:linear-gradient(90deg,#6366f1,#d946ef,#38bdf8)}
+footer{padding:45px 20px;text-align:center;color:#8f96aa;border-top:1px solid rgba(255,255,255,.1)}
+.skip-link{position:absolute;top:-60px;left:15px;background:#fff;color:#111;padding:10px 18px;z-index:9999;border-radius:8px;font-weight:bold}
+.skip-link:focus{top:15px}
+:focus-visible{outline:3px solid #f0abfc;outline-offset:4px}
+.fade-up{animation:fadeUp 1s ease both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:768px){.hero{min-height:80vh;padding:60px 20px}.hero h1{font-size:42px}.hero p{font-size:16px}.section{padding:60px 0}.section-title{font-size:34px}.info-card{padding:25px}}
+</style>
 </head>
 
 <body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
-<a href="#main-content" class="skip-link">
-Skip to main content
-</a>
-
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-
+<header>
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" aria-label="Main navigation">
 <div class="container">
-
-<a class="navbar-brand fw-bold" href="#">
-<i class="bi bi-code-slash"></i>
-WebOptimize
-</a>
-
-<button class="navbar-toggler"
-type="button"
-data-bs-toggle="collapse"
-data-bs-target="#mainNav"
-aria-label="Open navigation menu">
-
+<a class="navbar-brand logo" href="#home" aria-label="Payal Web home">Payal Web</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Open navigation menu">
 <span class="navbar-toggler-icon"></span>
-
 </button>
-
-<div class="collapse navbar-collapse" id="mainNav">
-
+<div class="collapse navbar-collapse" id="navMenu">
 <ul class="navbar-nav ms-auto">
-
-<li class="nav-item">
-<a class="nav-link" href="#home">Home</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="#seo">SEO</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="#accessibility">
-Accessibility
-</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="#semantic">
-Semantic HTML
-</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="#contact">Contact</a>
-</li>
-
+<li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="#seo">SEO</a></li>
+<li class="nav-item"><a class="nav-link" href="#accessibility">Accessibility</a></li>
+<li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
 </ul>
-
-<button id="themeBtn"
-class="theme-btn"
-aria-label="Toggle dark and light mode">
-
-<i class="bi bi-moon-stars-fill"></i>
-
-</button>
-
 </div>
-
 </div>
-
 </nav>
-
-
-<header id="home" class="hero">
-
-<div class="container">
-
-<div class="hero-badge">
-<span></span>
-SEO + ACCESSIBILITY
-</div>
-
-<h1>
-Build Better.
-<br>
-Build <span>Accessible.</span>
-</h1>
-
-<p>
-Optimize websites for search engines and make them
-usable for everyone.
-</p>
-
-<div class="hero-buttons">
-
-<a href="#seo" class="btn-main">
-Explore SEO
-<i class="bi bi-arrow-down"></i>
-</a>
-
-<a href="#accessibility" class="btn-outline">
-Accessibility
-</a>
-
-</div>
-
-</div>
-
 </header>
 
-
 <main id="main-content">
-
-
-<section id="seo" class="section">
-
-<div class="container">
-
-<div class="section-heading reveal">
-
-<span>01 — SEARCH ENGINE OPTIMIZATION</span>
-
-<h2>SEO Optimization</h2>
-
-<p>
-Search Engine Optimization helps search engines
-understand and rank web pages.
-</p>
-
+<section class="hero" id="home" aria-labelledby="main-heading">
+<div class="container fade-up">
+<div class="mb-4"><span class="badge rounded-pill text-bg-dark px-3 py-2"><i class="bi bi-stars" aria-hidden="true"></i> Web Designing</span></div>
+<h1 id="main-heading">Build Better Websites with <span class="gradient">SEO & Accessibility</span></h1>
+<p>Create websites that are beautiful, searchable, responsive and accessible to everyone.</p>
+<div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
+<a href="#seo" class="btn btn-main"><i class="bi bi-rocket-takeoff" aria-hidden="true"></i> Explore SEO</a>
+<a href="#accessibility" class="btn btn-outline"><i class="bi bi-universal-access" aria-hidden="true"></i> Accessibility</a>
 </div>
+</div>
+</section>
 
-
+<section class="section" id="seo" aria-labelledby="seo-heading">
+<div class="container">
+<h2 id="seo-heading" class="text-center section-title">Why <span class="gradient">SEO</span> Matters</h2>
 <div class="row g-4">
-
-<div class="col-md-4 reveal">
-
-<article class="feature-card">
-
-<div class="feature-icon">
-<i class="bi bi-search"></i>
+<article class="col-md-4">
+<div class="glass info-card">
+<div class="feature-icon"><i class="bi bi-search" aria-hidden="true"></i></div>
+<h3 class="mt-4">Meta Tags</h3>
+<p>Title, description, keywords and author information help search engines understand webpage content.</p>
 </div>
-
-<h3>Meta Tags</h3>
-
-<p>
-Title, description, keywords and robots meta
-tags help search engines understand the page.
-</p>
-
 </article>
-
+<article class="col-md-4">
+<div class="glass info-card">
+<div class="feature-icon"><i class="bi bi-code-slash" aria-hidden="true"></i></div>
+<h3 class="mt-4">Semantic HTML</h3>
+<p>Semantic elements provide a meaningful structure that improves both SEO and accessibility.</p>
 </div>
-
-
-<div class="col-md-4 reveal">
-
-<article class="feature-card">
-
-<div class="feature-icon">
-<i class="bi bi-diagram-3"></i>
-</div>
-
-<h3>Heading Structure</h3>
-
-<p>
-A logical H1, H2 and H3 hierarchy improves
-content structure and readability.
-</p>
-
 </article>
-
+<article class="col-md-4">
+<div class="glass info-card">
+<div class="feature-icon"><i class="bi bi-graph-up-arrow" aria-hidden="true"></i></div>
+<h3 class="mt-4">Better Visibility</h3>
+<p>Well-organized content helps search engines crawl and understand the webpage more effectively.</p>
 </div>
-
-
-<div class="col-md-4 reveal">
-
-<article class="feature-card">
-
-<div class="feature-icon">
-<i class="bi bi-speedometer2"></i>
-</div>
-
-<h3>Performance</h3>
-
-<p>
-Responsive design and optimized resources
-improve user experience and SEO.
-</p>
-
 </article>
-
-</div>
-
-</div>
-
-
-<div class="glass checklist reveal">
-
-<h3>
-<i class="bi bi-bar-chart-fill"></i>
-SEO Checklist
-</h3>
-
-<div class="check-row">
-
-<span>Page Title</span>
-
-<div class="progress">
-<div class="progress-bar"
-style="width:100%">
-100%
 </div>
 </div>
-
-</div>
-
-<div class="check-row">
-
-<span>Meta Description</span>
-
-<div class="progress">
-<div class="progress-bar"
-style="width:100%">
-100%
-</div>
-</div>
-
-</div>
-
-<div class="check-row">
-
-<span>Semantic HTML</span>
-
-<div class="progress">
-<div class="progress-bar"
-style="width:95%">
-95%
-</div>
-</div>
-
-</div>
-
-<div class="check-row">
-
-<span>Mobile Friendly</span>
-
-<div class="progress">
-<div class="progress-bar"
-style="width:100%">
-100%
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
 </section>
 
-
-<section id="accessibility"
-class="section alternate">
-
+<section class="section" id="accessibility" aria-labelledby="accessibility-heading">
 <div class="container">
-
-<div class="section-heading reveal">
-
-<span>02 — INCLUSIVE WEB DESIGN</span>
-
-<h2>Accessibility</h2>
-
-<p>
-Accessibility ensures websites can be used by
-people with different abilities and devices.
-</p>
-
-</div>
-
-
+<h2 id="accessibility-heading" class="text-center section-title">Designed for <span class="gradient">Everyone</span></h2>
 <div class="row g-4">
-
-<div class="col-md-6 reveal">
-
-<article class="access-card">
-
-<i class="bi bi-keyboard"></i>
-
-<div>
-
-<h3>Keyboard Navigation</h3>
-
-<p>
-All important controls can be accessed using
-the keyboard.
-</p>
-
-<kbd>Tab</kbd>
-<kbd>Enter</kbd>
-<kbd>Esc</kbd>
-
+<article class="col-md-6">
+<div class="glass info-card">
+<div class="feature-icon"><i class="bi bi-universal-access" aria-hidden="true"></i></div>
+<h3 class="mt-4">Accessible Navigation</h3>
+<ul class="list-unstyled mt-3">
+<li><span class="check">✓</span> Keyboard-friendly navigation</li>
+<li><span class="check">✓</span> Skip-to-content link</li>
+<li><span class="check">✓</span> Descriptive navigation links</li>
+<li><span class="check">✓</span> Visible keyboard focus</li>
+</ul>
 </div>
-
 </article>
-
+<article class="col-md-6">
+<div class="glass info-card">
+<div class="feature-icon"><i class="bi bi-eye" aria-hidden="true"></i></div>
+<h3 class="mt-4">Readable Content</h3>
+<ul class="list-unstyled mt-3">
+<li><span class="check">✓</span> Proper heading hierarchy</li>
+<li><span class="check">✓</span> Clear text structure</li>
+<li><span class="check">✓</span> Good color contrast</li>
+<li><span class="check">✓</span> ARIA labels</li>
+</ul>
 </div>
-
-
-<div class="col-md-6 reveal">
-
-<article class="access-card">
-
-<i class="bi bi-universal-access"></i>
-
-<div>
-
-<h3>ARIA Labels</h3>
-
-<p>
-ARIA labels provide additional information
-for assistive technologies.
-</p>
-
-<span class="tag">
-aria-label
-</span>
-
-<span class="tag">
-aria-live
-</span>
-
-</div>
-
 </article>
-
 </div>
-
-
-<div class="col-md-6 reveal">
-
-<article class="access-card">
-
-<i class="bi bi-eye"></i>
-
-<div>
-
-<h3>Color Contrast</h3>
-
-<p>
-Readable contrast helps users with visual
-impairments.
-</p>
-
-<span class="status">
-✓ Good Contrast
-</span>
-
 </div>
-
-</article>
-
-</div>
-
-
-<div class="col-md-6 reveal">
-
-<article class="access-card">
-
-<i class="bi bi-phone"></i>
-
-<div>
-
-<h3>Responsive Design</h3>
-
-<p>
-The website adapts to mobile, tablet and
-desktop screens.
-</p>
-
-<span class="status">
-✓ Responsive
-</span>
-
-</div>
-
-</article>
-
-</div>
-
-</div>
-
-
-<div class="accessibility-demo glass reveal">
-
-<h3>
-Accessibility Test
-</h3>
-
-<p>
-Press the button to run a basic accessibility
-check on this page.
-</p>
-
-<button id="testBtn"
-class="btn-main"
-type="button">
-
-Run Accessibility Test
-
-</button>
-
-<div id="testResult"
-class="test-result"
-aria-live="polite">
-</div>
-
-</div>
-
-</div>
-
 </section>
 
-
-<section id="semantic"
-class="section">
-
+<section class="section" id="features" aria-labelledby="features-heading">
 <div class="container">
-
-<div class="section-heading reveal">
-
-<span>03 — HTML5 STRUCTURE</span>
-
-<h2>Semantic HTML</h2>
-
-<p>
-Semantic elements clearly describe the purpose
-of different parts of a webpage.
-</p>
-
+<h2 id="features-heading" class="text-center section-title">Optimization <span class="gradient">Checklist</span></h2>
+<div class="glass demo">
+<div class="row g-5">
+<div class="col-md-6">
+<h3><i class="bi bi-search-heart gradient" aria-hidden="true"></i> SEO Checklist</h3>
+<div class="mt-4">
+<p>Semantic HTML</p>
+<div class="progress mb-3"><div class="progress-bar" style="width:95%"></div></div>
+<p>Meta Information</p>
+<div class="progress mb-3"><div class="progress-bar" style="width:90%"></div></div>
+<p>Heading Structure</p>
+<div class="progress mb-3"><div class="progress-bar" style="width:95%"></div></div>
 </div>
-
-
-<div class="semantic-grid reveal">
-
-<div class="code-window">
-
-<div class="window-top">
-<span></span>
-<span></span>
-<span></span>
 </div>
-
-<pre><code>
-&lt;header&gt;
-  Website Header
-&lt;/header&gt;
-
-&lt;nav&gt;
-  Navigation
-&lt;/nav&gt;
-
-&lt;main&gt;
-
-  &lt;section&gt;
-
-    &lt;article&gt;
-      Content
-    &lt;/article&gt;
-
-  &lt;/section&gt;
-
-&lt;/main&gt;
-
-&lt;footer&gt;
-  Footer
-&lt;/footer&gt;
-</code></pre>
-
+<div class="col-md-6">
+<h3><i class="bi bi-universal-access gradient" aria-hidden="true"></i> Accessibility</h3>
+<div class="mt-4">
+<p>Keyboard Navigation</p>
+<div class="progress mb-3"><div class="progress-bar" style="width:95%"></div></div>
+<p>Readable Content</p>
+<div class="progress mb-3"><div class="progress-bar" style="width:90%"></div></div>
+<p>Accessible Structure</p>
+<div class="progress mb-3"><div class="progress-bar" style="width:95%"></div></div>
 </div>
-
-
-<div class="semantic-info">
-
-<div>
-<strong>&lt;header&gt;</strong>
-<span>Introduces page content</span>
 </div>
-
-<div>
-<strong>&lt;nav&gt;</strong>
-<span>Contains navigation links</span>
 </div>
-
-<div>
-<strong>&lt;main&gt;</strong>
-<span>Main page content</span>
 </div>
-
-<div>
-<strong>&lt;section&gt;</strong>
-<span>Groups related content</span>
 </div>
-
-<div>
-<strong>&lt;article&gt;</strong>
-<span>Independent content</span>
-</div>
-
-<div>
-<strong>&lt;footer&gt;</strong>
-<span>Contains footer information</span>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
 </section>
 
-
-<section class="section stats-section">
-
+<section class="section" aria-labelledby="structure-heading">
 <div class="container">
-
-<div class="row g-4 text-center">
-
-<div class="col-6 col-md-3 reveal">
-
-<div class="stat-number"
-data-target="100">
-0
+<h2 id="structure-heading" class="text-center section-title">Semantic HTML Structure</h2>
+<div class="glass demo">
+<div class="code-box">
+<code>&lt;header&gt;<br>&nbsp;&nbsp;&lt;nav&gt;Navigation&lt;/nav&gt;<br>&lt;/header&gt;<br><br>&lt;main&gt;<br>&nbsp;&nbsp;&lt;section&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;article&gt;Content&lt;/article&gt;<br>&nbsp;&nbsp;&lt;/section&gt;<br>&lt;/main&gt;<br><br>&lt;footer&gt;Footer Content&lt;/footer&gt;</code>
 </div>
-
-<p>SEO Score</p>
-
+<p class="text-center mt-4 mb-0">Semantic HTML creates a meaningful structure for both <strong>search engines</strong> and <strong>assistive technologies</strong>.</p>
 </div>
-
-
-<div class="col-6 col-md-3 reveal">
-
-<div class="stat-number"
-data-target="95">
-0
 </div>
-
-<p>Accessibility</p>
-
-</div>
-
-
-<div class="col-6 col-md-3 reveal">
-
-<div class="stat-number"
-data-target="100">
-0
-</div>
-
-<p>Responsive</p>
-
-</div>
-
-
-<div class="col-6 col-md-3 reveal">
-
-<div class="stat-number"
-data-target="5">
-0
-</div>
-
-<p>HTML5 Elements</p>
-
-</div>
-
-</div>
-
-</div>
-
 </section>
-
-
-<section id="contact"
-class="section">
-
-<div class="container">
-
-<div class="contact-box glass reveal">
-
-<h2>Build Better Websites</h2>
-
-<p>
-Good web design is not only about appearance.
-It should also be searchable, accessible and
-easy to use.
-</p>
-
-<a href="#home"
-class="btn-main">
-Back to Top
-<i class="bi bi-arrow-up"></i>
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
 </main>
 
-
 <footer>
-
-<div class="container">
-
-<div class="footer-content">
-
-<div>
-<strong>
-<i class="bi bi-code-slash"></i>
-WebOptimize
-</strong>
-
-<p>
-SEO • Accessibility • Semantic HTML
-</p>
-
-</div>
-
-<div>
-<p>
-Designed by Payal Makani
-</p>
-
-<p>
-© 2026 All Rights Reserved
-</p>
-
-</div>
-
-</div>
-
-</div>
-
+<p class="mb-2"><i class="bi bi-code-square" aria-hidden="true"></i> <strong>Payal Makani</strong> | Web Designing Experiment 4</p>
+<p class="mb-0">SEO Optimized • Accessible • Responsive • Interactive</p>
 </footer>
 
-
-<button id="topBtn"
-class="top-btn"
-aria-label="Back to top">
-
-<i class="bi bi-arrow-up"></i>
-
-</button>
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-</script>
-
-<script src="js/app.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html>
+  </html>
