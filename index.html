@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SEO & Web Accessibility | Payal Makani</title>
+
+<meta name="description" content="An interactive webpage demonstrating SEO, accessibility, semantic HTML and responsive web design.">
+<meta name="keywords" content="SEO, accessibility, semantic HTML, HTML5, Bootstrap, web designing">
+<meta name="author" content="Payal Makani">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#6366f1">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="mouse-glow"></div>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<header>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" aria-label="Main navigation">
+
+<div class="container">
+
+<a class="navbar-brand logo" href="#home">
+Payal<span>.</span>
+</a>
+
+<button class="navbar-toggler"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#navMenu"
+aria-controls="navMenu"
+aria-expanded="false"
+aria-label="Open navigation menu">
+
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navMenu">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link active" href="#home">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#seo">SEO</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#accessibility">Accessibility</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#checker">Checker</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#semantic">Semantic HTML</a>
+</li>
+
+</ul>
+
+<button id="themeBtn"
+class="theme-btn ms-lg-3"
+type="button"
+aria-label="Toggle light and dark mode">
+
+<i class="bi bi-sun-fill" id="themeIcon"></i>
+
+</button>
+
+</div>
+</div>
+</nav>
+</header>
+
+<main id="main-content">
+
+<!-- HERO -->
+
+<section id="home" class="hero">
+
+<div class="container text-center">
+
+<div class="hero-badge">
+<i class="bi bi-stars"></i>
+WEB DESIGNING EXPERIMENT 4
+</div>
+
+<h1>
+Build Better Websites With
+<br>
+<span class="gradient-text">SEO & Accessibility</span>
+</h1>
+
+<p>
+Create websites that are beautiful, searchable,
+responsive and accessible to everyone.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#seo" class="btn-main">
+<i class="bi bi-rocket-takeoff"></i>
+Explore SEO
+</a>
+
+<a href="#checker" class="btn-outline">
+<i class="bi bi-shield-check"></i>
+Test Website
+</a>
+
+</div>
+
+<div class="hero-scroll">
+<i class="bi bi-mouse"></i>
+Scroll to explore
+</div>
+
+</div>
+</section>
+
+
+<!-- SEO -->
+
+<section id="seo" class="section">
+
+<div class="container">
+
+<div class="section-heading reveal">
+
+<span>01 — SEO</span>
+
+<h2>
+Make Your Website
+<span class="gradient-text">Search Friendly</span>
+</h2>
+
+<p>
+Search Engine Optimization helps search engines understand
+and rank website content.
+</p>
+
+</div>
+
+<div class="row g-4">
+
+<article class="col-lg-4 reveal">
+
+<div class="glass-card feature-card">
+
+<div class="icon-box">
+<i class="bi bi-search"></i>
+</div>
+
+<h3>Meta Tags</h3>
+
+<p>
+Title, description, author and other metadata provide
+important information about the webpage.
+</p>
+
+<span class="card-number">01</span>
+
+</div>
+</article>
+
+
+<article class="col-lg-4 reveal">
+
+<div class="glass-card feature-card">
+
+<div class="icon-box">
+<i class="bi bi-code-slash"></i>
+</div>
+
+<h3>Semantic HTML</h3>
+
+<p>
+Semantic elements create a meaningful structure that
+helps search engines understand content.
+</p>
+
+<span class="card-number">02</span>
+
+</div>
+</article>
+
+
+<article class="col-lg-4 reveal">
+
+<div class="glass-card feature-card">
+
+<div class="icon-box">
+<i class="bi bi-graph-up-arrow"></i>
+</div>
+
+<h3>Better Visibility</h3>
+
+<p>
+Well-organized content improves crawling, readability
+and overall search visibility.
+</p>
+
+<span class="card-number">03</span>
+
+</div>
+</article>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ACCESSIBILITY -->
+
+<section id="accessibility" class="section">
+
+<div class="container">
+
+<div class="section-heading text-center reveal">
+
+<span>02 — ACCESSIBILITY</span>
+
+<h2>
+Designed For
+<span class="gradient-text">Everyone</span>
+</h2>
+
+<p>
+Accessibility ensures websites can be used by people
+with different abilities and devices.
+</p>
+
+</div>
+
+<div class="row g-4">
+
+<div class="col-md-6 reveal">
+
+<div class="glass-card access-card">
+
+<i class="bi bi-universal-access access-icon"></i>
+
+<h3>Accessible Navigation</h3>
+
+<ul>
+
+<li><i class="bi bi-check-circle-fill"></i> Keyboard navigation</li>
+
+<li><i class="bi bi-check-circle-fill"></i> Skip-to-content link</li>
+
+<li><i class="bi bi-check-circle-fill"></i> Descriptive links</li>
+
+<li><i class="bi bi-check-circle-fill"></i> Visible focus indicators</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+<div class="col-md-6 reveal">
+
+<div class="glass-card access-card">
+
+<i class="bi bi-eye access-icon"></i>
+
+<h3>Readable Content</h3>
+
+<ul>
+
+<li><i class="bi bi-check-circle-fill"></i> Proper headings</li>
+
+<li><i class="bi bi-check-circle-fill"></i> Good color contrast</li>
+
+<li><i class="bi bi-check-circle-fill"></i> Clear structure</li>
+
+<li><i class="bi bi-check-circle-fill"></i> ARIA support</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- CHECKER -->
+
+<section id="checker" class="section">
+
+<div class="container">
+
+<div class="section-heading text-center reveal">
+
+<span>03 — INTERACTIVE TOOL</span>
+
+<h2>
+Website
+<span class="gradient-text">Health Checker</span>
+</h2>
+
+<p>
+Run a quick SEO and accessibility check on this webpage.
+</p>
+
+</div>
+
+
+<div class="glass-card checker-card reveal">
+
+<div class="row g-5">
+
+<div class="col-lg-6">
+
+<h3>
+<i class="bi bi-speedometer2"></i>
+SEO Score
+</h3>
+
+<div class="score-circle">
+
+<strong id="seoScore">0</strong>
+<span>/ 100</span>
+
+</div>
+
+<div class="progress">
+
+<div class="progress-bar"
+id="seoProgress"
+data-width="95">
+</div>
+
+</div>
+
+<div class="check-item">
+<span>Meta description</span>
+<i class="bi bi-check-circle-fill"></i>
+</div>
+
+<div class="check-item">
+<span>Heading structure</span>
+<i class="bi bi-check-circle-fill"></i>
+</div>
+
+<div class="check-item">
+<span>Semantic HTML</span>
+<i class="bi bi-check-circle-fill"></i>
+</div>
+
+</div>
+
+
+<div class="col-lg-6">
+
+<h3>
+<i class="bi bi-universal-access"></i>
+Accessibility Score
+</h3>
+
+<div class="score-circle">
+
+<strong id="accessScore">0</strong>
+<span>/ 100</span>
+
+</div>
+
+<div class="progress">
+
+<div class="progress-bar"
+id="accessProgress"
+data-width="95">
+</div>
+
+</div>
+
+<div class="check-item">
+<span>Keyboard support</span>
+<i class="bi bi-check-circle-fill"></i>
+</div>
+
+<div class="check-item">
+<span>ARIA labels</span>
+<i class="bi bi-check-circle-fill"></i>
+</div>
+
+<div class="check-item">
+<span>Skip navigation</span>
+<i class="bi bi-check-circle-fill"></i>
+</div>
+
+</div>
+
+</div>
+
+<button id="runCheck" class="btn-main mt-5">
+
+<i class="bi bi-magic"></i>
+Run Website Check
+
+</button>
+
+<div id="checkResult" class="check-result">
+Click the button to run the test.
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- STATS -->
+
+<section class="stats-section">
+
+<div class="container">
+
+<div class="row g-4">
+
+<div class="col-6 col-lg-3 reveal">
+
+<div class="stat-card">
+
+<i class="bi bi-search"></i>
+
+<strong class="counter" data-target="95">0</strong>
+
+<span>SEO Score</span>
+
+</div>
+
+</div>
+
+
+<div class="col-6 col-lg-3 reveal">
+
+<div class="stat-card">
+
+<i class="bi bi-universal-access"></i>
+
+<strong class="counter" data-target="95">0</strong>
+
+<span>Accessibility</span>
+
+</div>
+
+</div>
+
+
+<div class="col-6 col-lg-3 reveal">
+
+<div class="stat-card">
+
+<i class="bi bi-phone"></i>
+
+<strong class="counter" data-target="100">0</strong>
+
+<span>Responsive</span>
+
+</div>
+
+</div>
+
+
+<div class="col-6 col-lg-3 reveal">
+
+<div class="stat-card">
+
+<i class="bi bi-lightning-charge"></i>
+
+<strong class="counter" data-target="24">0</strong>
+
+<span>Features</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- SEMANTIC -->
+
+<section id="semantic" class="section">
+
+<div class="container">
+
+<div class="section-heading text-center reveal">
+
+<span>04 — STRUCTURE</span>
+
+<h2>
+Semantic
+<span class="gradient-text">HTML</span>
+</h2>
+
+</div>
+
+<div class="glass-card code-card reveal">
+
+<div class="code-header">
+
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+
+<span class="ms-3">index.html</span>
+
+<button id="copyCode" class="copy-btn ms-auto">
+
+<i class="bi bi-copy"></i>
+Copy
+
+</button>
+
+</div>
+
+<pre id="semanticCode"><code>&lt;header&gt;
+  &lt;nav&gt;Navigation&lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+  &lt;section&gt;
+    &lt;article&gt;Content&lt;/article&gt;
+  &lt;/section&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;Footer Content&lt;/footer&gt;</code></pre>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- CTA -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="cta glass-card reveal">
+
+<div class="cta-icon">
+<i class="bi bi-stars"></i>
+</div>
+
+<h2>
+Build Websites
+<span class="gradient-text">For Everyone.</span>
+</h2>
+
+<p>
+SEO + Accessibility + Responsive Design +
+Interactive Experience.
+</p>
+
+<button id="testBtn" class="btn-main">
+
+<i class="bi bi-magic"></i>
+Test Interaction
+
+</button>
+
+</div>
+
+</div>
+</section>
+
+</main>
+
+
+<footer>
+
+<div class="container">
+
+<div class="footer-logo">
+Payal<span>.</span>
+</div>
+
+<p>
+SEO Optimized • Accessible • Responsive • Interactive
+</p>
+
+<p class="small">
+© 2026 Payal Makani | Web Designing Experiment 4
+</p>
+
+</div>
+
+</footer>
+
+
+<button id="topBtn"
+type="button"
+aria-label="Back to top">
+
+<i class="bi bi-arrow-up"></i>
+
+</button>
+
+
+<div class="toast-container position-fixed bottom-0 start-50 translate-middle-x p-3">
+
+<div id="liveToast"
+class="toast"
+role="status"
+aria-live="polite">
+
+<div class="toast-header">
+
+<i class="bi bi-check-circle-fill text-success me-2"></i>
+
+<strong class="me-auto">Payal Web</strong>
+
+<small>Now</small>
+
+<button type="button"
+class="btn-close"
+data-bs-dismiss="toast"
+aria-label="Close">
+</button>
+
+</div>
+
+<div class="toast-body">
+Great! The interactive feature is working successfully.
+</div>
+
+</div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="js/app.js"></script>
+
+</body>
+  </html>
