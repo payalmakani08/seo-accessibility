@@ -1013,3 +1013,32 @@ section {
         transition-duration: 0.01ms !important;
     }
 }
+
+/* Made by Payal Makani */
+.made-by {
+    text-align: center;
+    padding: 18px 12px;
+    margin-top: 25px;
+    background: linear-gradient(120deg, #f4f0ff, #fff0f7);
+    color: #625a78;
+    font-size: 14px;
+    border-top: 1px solid #e9e2f7;
+}
+
+.made-by strong {
+    background: linear-gradient(90deg, #7058e8, #d66cbd);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.made-by .heart {
+    color: #e875a8;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.made-by:hover .heart {
+    transform: scale(1.25);
+}
+
