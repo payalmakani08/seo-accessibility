@@ -1,661 +1,481 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SEO & Web Accessibility | Payal Makani</title>
+    <meta name="description"
+          content="Learn about SEO and web accessibility with a simple interactive website checker.">
 
-<meta name="description" content="An interactive webpage demonstrating SEO, accessibility, semantic HTML and responsive web design.">
-<meta name="keywords" content="SEO, accessibility, semantic HTML, HTML5, Bootstrap, web designing">
-<meta name="author" content="Payal Makani">
-<meta name="robots" content="index, follow">
-<meta name="theme-color" content="#6366f1">
+    <title>SEO & Accessibility | Payal</title>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
 
-<link rel="stylesheet" href="css/style.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css?v=2">
 </head>
 
 <body>
 
-<div class="mouse-glow"></div>
-
-<a href="#main-content" class="skip-link">Skip to main content</a>
-
-<header>
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" aria-label="Main navigation">
-
-<div class="container">
-
-<a class="navbar-brand logo" href="#home">
-Payal
-</a>
-
-<button class="navbar-toggler"
-type="button"
-data-bs-toggle="collapse"
-data-bs-target="#navMenu"
-aria-controls="navMenu"
-aria-expanded="false"
-aria-label="Open navigation menu">
-
-<span class="navbar-toggler-icon"></span>
-</button>
-
-<div class="collapse navbar-collapse" id="navMenu">
-
-<ul class="navbar-nav ms-auto">
-
-<li class="nav-item">
-<a class="nav-link active" href="#home">Home</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="#seo">SEO</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="#accessibility">Accessibility</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="#checker">Checker</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="#semantic">Semantic HTML</a>
-</li>
-
-</ul>
-
-<button id="themeBtn"
-class="theme-btn ms-lg-3"
-type="button"
-aria-label="Toggle light and dark mode">
-
-<i class="bi bi-sun-fill" id="themeIcon"></i>
-
-</button>
-
-</div>
-</div>
-</nav>
-</header>
-
-<main id="main-content">
-
-<!-- HERO -->
-
-<section id="home" class="hero">
-
-<div class="container text-center">
-
-<div class="hero-badge">
-<i class="bi bi-stars"></i>
-WEB DESIGNING
-</div>
-
-<h1>
-Build Better Websites With
-<br>
-<span class="gradient-text">SEO & Accessibility</span>
-</h1>
-
-<p>
-Create websites that are beautiful, searchable,
-responsive and accessible to everyone.
-</p>
-
-<div class="hero-buttons">
-
-<a href="#seo" class="btn-main">
-<i class="bi bi-rocket-takeoff"></i>
-Explore SEO
-</a>
-
-<a href="#checker" class="btn-outline">
-<i class="bi bi-shield-check"></i>
-Test Website
-</a>
-
-</div>
-
-<div class="hero-scroll">
-<i class="bi bi-mouse"></i>
-Scroll to explore
-</div>
-
-</div>
-</section>
-
-
-<!-- SEO -->
-
-<section id="seo" class="section">
-
-<div class="container">
-
-<div class="section-heading reveal">
-
-<span>01 — SEO</span>
-
-<h2>
-Make Your Website
-<span class="gradient-text">Search Friendly</span>
-</h2>
-
-<p>
-Search Engine Optimization helps search engines understand
-and rank website content.
-</p>
-
-</div>
-
-<div class="row g-4">
-
-<article class="col-lg-4 reveal">
-
-<div class="glass-card feature-card">
-
-<div class="icon-box">
-<i class="bi bi-search"></i>
-</div>
-
-<h3>Meta Tags</h3>
-
-<p>
-Title, description, author and other metadata provide
-important information about the webpage.
-</p>
-
-<span class="card-number">01</span>
-
-</div>
-</article>
-
-
-<article class="col-lg-4 reveal">
-
-<div class="glass-card feature-card">
-
-<div class="icon-box">
-<i class="bi bi-code-slash"></i>
-</div>
-
-<h3>Semantic HTML</h3>
-
-<p>
-Semantic elements create a meaningful structure that
-helps search engines understand content.
-</p>
-
-<span class="card-number">02</span>
-
-</div>
-</article>
-
-
-<article class="col-lg-4 reveal">
-
-<div class="glass-card feature-card">
-
-<div class="icon-box">
-<i class="bi bi-graph-up-arrow"></i>
-</div>
-
-<h3>Better Visibility</h3>
-
-<p>
-Well-organized content improves crawling, readability
-and overall search visibility.
-</p>
-
-<span class="card-number">03</span>
-
-</div>
-</article>
-
-</div>
-
-</div>
-</section>
-
-
-<!-- ACCESSIBILITY -->
-
-<section id="accessibility" class="section">
-
-<div class="container">
-
-<div class="section-heading text-center reveal">
-
-<span>02 — ACCESSIBILITY</span>
-
-<h2>
-Designed For
-<span class="gradient-text">Everyone</span>
-</h2>
-
-<p>
-Accessibility ensures websites can be used by people
-with different abilities and devices.
-</p>
-
-</div>
-
-<div class="row g-4">
-
-<div class="col-md-6 reveal">
-
-<div class="glass-card access-card">
-
-<i class="bi bi-universal-access access-icon"></i>
-
-<h3>Accessible Navigation</h3>
-
-<ul>
-
-<li><i class="bi bi-check-circle-fill"></i> Keyboard navigation</li>
-
-<li><i class="bi bi-check-circle-fill"></i> Skip-to-content link</li>
-
-<li><i class="bi bi-check-circle-fill"></i> Descriptive links</li>
-
-<li><i class="bi bi-check-circle-fill"></i> Visible focus indicators</li>
-
-</ul>
-
-</div>
-
-</div>
-
-
-<div class="col-md-6 reveal">
-
-<div class="glass-card access-card">
-
-<i class="bi bi-eye access-icon"></i>
-
-<h3>Readable Content</h3>
-
-<ul>
-
-<li><i class="bi bi-check-circle-fill"></i> Proper headings</li>
-
-<li><i class="bi bi-check-circle-fill"></i> Good color contrast</li>
-
-<li><i class="bi bi-check-circle-fill"></i> Clear structure</li>
-
-<li><i class="bi bi-check-circle-fill"></i> ARIA support</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-</section>
-
-
-<!-- CHECKER -->
-
-<section id="checker" class="section">
-
-<div class="container">
-
-<div class="section-heading text-center reveal">
-
-<span>03 — INTERACTIVE TOOL</span>
-
-<h2>
-Website
-<span class="gradient-text">Health Checker</span>
-</h2>
-
-<p>
-Run a quick SEO and accessibility check on this webpage.
-</p>
-
-</div>
-
-
-<div class="glass-card checker-card reveal">
-
-<div class="row g-5">
-
-<div class="col-lg-6">
-
-<h3>
-<i class="bi bi-speedometer2"></i>
-SEO Score
-</h3>
-
-<div class="score-circle">
-
-<strong id="seoScore">0</strong>
-<span>/ 100</span>
-
-</div>
-
-<div class="progress">
-
-<div class="progress-bar"
-id="seoProgress"
-data-width="95">
-</div>
-
-</div>
-
-<div class="check-item">
-<span>Meta description</span>
-<i class="bi bi-check-circle-fill"></i>
-</div>
-
-<div class="check-item">
-<span>Heading structure</span>
-<i class="bi bi-check-circle-fill"></i>
-</div>
-
-<div class="check-item">
-<span>Semantic HTML</span>
-<i class="bi bi-check-circle-fill"></i>
-</div>
-
-</div>
-
-
-<div class="col-lg-6">
-
-<h3>
-<i class="bi bi-universal-access"></i>
-Accessibility Score
-</h3>
-
-<div class="score-circle">
-
-<strong id="accessScore">0</strong>
-<span>/ 100</span>
-
-</div>
-
-<div class="progress">
-
-<div class="progress-bar"
-id="accessProgress"
-data-width="95">
-</div>
-
-</div>
-
-<div class="check-item">
-<span>Keyboard support</span>
-<i class="bi bi-check-circle-fill"></i>
-</div>
-
-<div class="check-item">
-<span>ARIA labels</span>
-<i class="bi bi-check-circle-fill"></i>
-</div>
-
-<div class="check-item">
-<span>Skip navigation</span>
-<i class="bi bi-check-circle-fill"></i>
-</div>
-
-</div>
-
-</div>
-
-<button id="runCheck" class="btn-main mt-5">
-
-<i class="bi bi-magic"></i>
-Run Website Check
-
-</button>
-
-<div id="checkResult" class="check-result">
-Click the button to run the test.
-</div>
-
-</div>
-
-</div>
-</section>
-
-
-<!-- STATS -->
-
-<section class="stats-section">
-
-<div class="container">
-
-<div class="row g-4">
-
-<div class="col-6 col-lg-3 reveal">
-
-<div class="stat-card">
-
-<i class="bi bi-search"></i>
-
-<strong class="counter" data-target="95">0</strong>
-
-<span>SEO Score</span>
-
-</div>
-
-</div>
-
-
-<div class="col-6 col-lg-3 reveal">
-
-<div class="stat-card">
-
-<i class="bi bi-universal-access"></i>
-
-<strong class="counter" data-target="95">0</strong>
-
-<span>Accessibility</span>
-
-</div>
-
-</div>
-
-
-<div class="col-6 col-lg-3 reveal">
-
-<div class="stat-card">
-
-<i class="bi bi-phone"></i>
-
-<strong class="counter" data-target="100">0</strong>
-
-<span>Responsive</span>
-
-</div>
-
-</div>
-
-
-<div class="col-6 col-lg-3 reveal">
-
-<div class="stat-card">
-
-<i class="bi bi-lightning-charge"></i>
-
-<strong class="counter" data-target="24">0</strong>
-
-<span>Features</span>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-</section>
-
-
-<!-- SEMANTIC -->
-
-<section id="semantic" class="section">
-
-<div class="container">
-
-<div class="section-heading text-center reveal">
-
-<span>04 — STRUCTURE</span>
-
-<h2>
-Semantic
-<span class="gradient-text">HTML</span>
-</h2>
-
-</div>
-
-<div class="glass-card code-card reveal">
-
-<div class="code-header">
-
-<span class="dot red"></span>
-<span class="dot yellow"></span>
-<span class="dot green"></span>
-
-<span class="ms-3">index.html</span>
-
-<button id="copyCode" class="copy-btn ms-auto">
-
-<i class="bi bi-copy"></i>
-Copy
-
-</button>
-
-</div>
-
-<pre id="semanticCode"><code>&lt;header&gt;
-  &lt;nav&gt;Navigation&lt;/nav&gt;
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">
+                <span class="brand-icon">P</span> WebWise
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNav"
+                    aria-controls="mainNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#seo">SEO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#accessibility">
+                            Accessibility
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#checker">Website Checker</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn nav-button" href="#checker">
+                            Try it out ↗
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+
+        <!-- Hero -->
+        <section class="hero-section" id="home">
+            <div class="container">
+                <div class="row align-items-center g-5">
+
+                    <div class="col-lg-7">
+                        <span class="eyebrow">
+                            WEB DESIGNING · EXPERIMENT 4
+                        </span>
+
+                        <h1 class="hero-title">
+                            Good websites<br>
+                            work for <span>everyone.</span>
+                        </h1>
+
+                        <p class="hero-text">
+                            Make your website easier to find, easier to use,
+                            and more welcoming to every visitor.
+                        </p>
+
+                        <div class="d-flex flex-wrap gap-3 mt-4">
+                            <a href="#checker" class="btn gradient-button">
+                                Check HTML <span>→</span>
+                            </a>
+
+                            <a href="#seo" class="btn outline-button">
+                                Explore the basics
+                            </a>
+                        </div>
+
+                        <div class="hero-note mt-4">
+                            <span class="note-dot"></span>
+                            Simple tips. Useful checks. Better websites.
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="preview-card">
+                            <div class="preview-top">
+                                <div class="window-dots">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <span class="preview-label">WEBSITE OVERVIEW</span>
+                            </div>
+
+                            <div class="preview-content">
+                                <div class="preview-symbol">✦</div>
+
+                                <p class="small-label">YOUR WEBSITE</p>
+                                <h2>Made to be found.</h2>
+                                <p class="text-muted">
+                                    Built with care, clarity and accessibility.
+                                </p>
+
+                                <div class="preview-item">
+                                    <span class="preview-check">✓</span>
+                                    <div>
+                                        <strong>Search friendly</strong>
+                                        <small>Clear titles and descriptions</small>
+                                    </div>
+                                </div>
+
+                                <div class="preview-item">
+                                    <span class="preview-check">✓</span>
+                                    <div>
+                                        <strong>Easy to navigate</strong>
+                                        <small>Meaningful content structure</small>
+                                    </div>
+                                </div>
+
+                                <div class="preview-item">
+                                    <span class="preview-check">✓</span>
+                                    <div>
+                                        <strong>Made for everyone</strong>
+                                        <small>Readable and usable content</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="preview-bottom">
+                                <span>SEO</span>
+                                <span>Accessibility</span>
+                                <span>Responsive</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Small introduction -->
+        <section class="intro-strip">
+            <div class="container">
+                <div class="row g-3 text-center">
+                    <div class="col-12 col-md-4">
+                        <div class="strip-item">
+                            <span>01</span>
+                            <strong>Be discoverable</strong>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="strip-item">
+                            <span>02</span>
+                            <strong>Be understandable</strong>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="strip-item">
+                            <span>03</span>
+                            <strong>Be accessible</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEO section -->
+        <section class="content-section" id="seo">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">01 — SEARCH ENGINE OPTIMIZATION</span>
+                    <h2>Help people <span>find you.</span></h2>
+                    <p>
+                        SEO helps search engines understand your content
+                        and helps people discover relevant pages.
+                    </p>
+                </div>
+
+                <div class="row g-4 mt-3">
+                    <div class="col-md-4">
+                        <article class="info-card">
+                            <div class="card-icon purple-icon">Aa</div>
+                            <h3>Page titles</h3>
+                            <p>
+                                Give each page a clear title that explains
+                                what visitors can expect.
+                            </p>
+                            <span class="card-number">01</span>
+                        </article>
+                    </div>
+
+                    <div class="col-md-4">
+                        <article class="info-card">
+                            <div class="card-icon pink-icon">⌕</div>
+                            <h3>Meta descriptions</h3>
+                            <p>
+                                Write a short, useful summary of the
+                                information on your page.
+                            </p>
+                            <span class="card-number">02</span>
+                        </article>
+                    </div>
+
+                    <div class="col-md-4">
+                        <article class="info-card">
+                            <div class="card-icon blue-icon">H1</div>
+                            <h3>Clear headings</h3>
+                            <p>
+                                Organize content into meaningful sections
+                                so it is easier to scan.
+                            </p>
+                            <span class="card-number">03</span>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Accessibility section -->
+        <section class="access-section" id="accessibility">
+            <div class="container">
+                <div class="row align-items-center g-5">
+
+                    <div class="col-lg-6">
+                        <span class="eyebrow">02 — WEB ACCESSIBILITY</span>
+
+                        <h2 class="section-title">
+                            The web should<br>
+                            <span>include everyone.</span>
+                        </h2>
+
+                        <p class="section-description">
+                            Accessible websites are easier to use for
+                            people with different abilities, devices
+                            and ways of navigating.
+                        </p>
+
+                        <a href="#checker" class="text-link">
+                            Check your HTML <span>→</span>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="access-list">
+                            <div class="access-row">
+                                <div class="access-icon">⌨</div>
+                                <div>
+                                    <h3>Keyboard navigation</h3>
+                                    <p>Make links and controls usable without a mouse.</p>
+                                </div>
+                            </div>
+
+                            <div class="access-row">
+                                <div class="access-icon">▧</div>
+                                <div>
+                                    <h3>Image descriptions</h3>
+                                    <p>Add useful alternative text to meaningful images.</p>
+                                </div>
+                            </div>
+
+                            <div class="access-row">
+                                <div class="access-icon">Aa</div>
+                                <div>
+                                    <h3>Readable content</h3>
+                                    <p>Use clear language, headings and sufficient contrast.</p>
+                                </div>
+                            </div>
+
+                            <div class="access-row">
+                                <div class="access-icon">◎</div>
+                                <div>
+                                    <h3>Clear form labels</h3>
+                                    <p>Help visitors understand what each field requires.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Checker -->
+        <section class="checker-section" id="checker">
+            <div class="container">
+
+                <div class="section-heading text-center">
+                    <span class="eyebrow">03 — INTERACTIVE TOOL</span>
+                    <h2>Give your HTML a <span>quick check.</span></h2>
+                    <p>
+                        Paste your webpage HTML below and check a few
+                        important SEO and accessibility basics.
+                    </p>
+                </div>
+
+                <div class="checker-card">
+                    <div class="checker-header">
+                        <div>
+                            <span class="live-dot"></span>
+                            <strong>HTML Health Checker</strong>
+                        </div>
+                        <span class="tool-tag">FREE TOOL</span>
+                    </div>
+
+                    <form id="checkerForm">
+                        <label for="htmlInput" class="form-label">
+                            Your HTML code
+                        </label>
+
+                        <textarea
+                            class="form-control code-input"
+                            id="htmlInput"
+                            rows="10"
+                            placeholder="Paste your HTML code here..."
+                            spellcheck="false"
+                            required
+                        ></textarea>
+
+                        <div class="d-flex flex-wrap justify-content-between
+                                    align-items-center gap-3 mt-3">
+                            <small class="helper-text">
+                                Your code is checked in this browser.
+                            </small>
+
+                            <div class="d-flex flex-wrap gap-2">
+                                <button type="button" id="sampleButton"
+                                        class="btn sample-button">
+                                    Load sample
+                                </button>
+
+                                <button type="reset" class="btn reset-button">
+                                    Clear
+                                </button>
+
+                                <button type="submit" class="btn gradient-button">
+                                    Run check →
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div id="message" class="message-box mt-4"
+                         role="status" aria-live="polite">
+                        Add your HTML and select “Run check” to see your results.
+                    </div>
+
+                    <!-- Results -->
+                    <div id="results" class="results-area d-none">
+
+                        <div class="row g-3 score-row">
+                            <div class="col-md-6">
+                                <div class="score-card">
+                                    <div class="score-heading">
+                                        <span>SEO score</span>
+                                        <span id="seoScoreLabel">0/100</span>
+                                    </div>
+                                    <div class="progress" role="progressbar"
+                                         aria-label="SEO score"
+                                         aria-valuemin="0"
+                                         aria-valuemax="100"
+                                         id="seoProgress">
+                                        <div id="seoProgressBar"
+                                             class="progress-bar seo-bar"
+                                             style="width: 0%"></div>
+                                    </div>
+                                    <p id="seoSummary">Waiting for results</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="score-card">
+                                    <div class="score-heading">
+                                        <span>Accessibility score</span>
+                                        <span id="a11yScoreLabel">0/100</span>
+                                    </div>
+                                    <div class="progress"
+                                         role="progressbar"
+                                         aria-label="Accessibility score"
+                                         aria-valuemin="0"
+                                         aria-valuemax="100"
+                                         id="a11yProgress">
+                                        <div id="a11yProgressBar"
+                                             class="progress-bar a11y-bar"
+                                             style="width: 0%"></div>
+                                    </div>
+                                    <p id="a11ySummary">Waiting for results</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="results-heading mt-4">
+                            <h3>Check results</h3>
+                            <span id="checksCount">0 checks</span>
+                        </div>
+
+                        <div id="resultsList" class="results-list"></div>
+
+                        <div class="tip-box mt-4">
+                            <strong>Remember</strong>
+                            <p class="mb-0">
+                                These are basic HTML checks, not a complete
+                                SEO audit or an accessibility certification.
+                                Some issues require manual testing.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Semantic HTML example -->
+        <section class="structure-section">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-5">
+                        <span class="eyebrow">04 — BETTER STRUCTURE</span>
+                        <h2 class="section-title">
+                            Give your content<br>
+                            <span>a clear structure.</span>
+                        </h2>
+                        <p class="section-description">
+                            Semantic HTML gives content meaning and helps
+                            browsers and assistive technologies understand
+                            the purpose of each section.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-7">
+                        <div class="code-card">
+                            <div class="code-card-top">
+                                <span>index.html</span>
+                                <button type="button" id="copyCode"
+                                        class="copy-button">
+                                    Copy code
+                                </button>
+                            </div>
+
+                            <pre><code id="semanticCode">&lt;header&gt;
+  &lt;nav aria-label="Main navigation"&gt;
+    &lt;a href="#home"&gt;Home&lt;/a&gt;
+  &lt;/nav&gt;
 &lt;/header&gt;
 
-&lt;main&gt;
+&lt;main id="main-content"&gt;
   &lt;section&gt;
-    &lt;article&gt;Content&lt;/article&gt;
+    &lt;h1&gt;Welcome to my website&lt;/h1&gt;
+    &lt;p&gt;Useful and meaningful content.&lt;/p&gt;
   &lt;/section&gt;
 &lt;/main&gt;
 
-&lt;footer&gt;Footer Content&lt;/footer&gt;</code></pre>
+&lt;footer&gt;
+  &lt;p&gt;Thanks for visiting!&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-</div>
-
-</div>
-</section>
-
-
-<!-- CTA -->
-
-<section class="section">
-
-<div class="container">
-
-<div class="cta glass-card reveal">
-
-<div class="cta-icon">
-<i class="bi bi-stars"></i>
-</div>
-
-<h2>
-Build Websites
-<span class="gradient-text">For Everyone.</span>
-</h2>
-
-<p>
-SEO + Accessibility + Responsive Design +
-Interactive Experience.
-</p>
-
-<button id="testBtn" class="btn-main">
-
-<i class="bi bi-magic"></i>
-Test Interaction
-
-</button>
-
-</div>
-
-</div>
-</section>
-
-</main>
-
-
-<footer>
-
-<div class="container">
-
-<div class="footer-logo">
-Payal<span>.</span>
-</div>
-
-<p>
-SEO Optimized • Accessible • Responsive • Interactive
-</p>
-
-<p class="small">
-© 2026 Payal Makani | Web Designing Experiment 4
-</p>
-
-</div>
-
-</footer>
-
-
-<button id="topBtn"
-type="button"
-aria-label="Back to top">
-
-<i class="bi bi-arrow-up"></i>
-
-</button>
-
-
-<div class="toast-container position-fixed bottom-0 start-50 translate-middle-x p-3">
-
-<div id="liveToast"
-class="toast"
-role="status"
-aria-live="polite">
-
-<div class="toast-header">
-
-<i class="bi bi-check-circle-fill text-success me-2"></i>
-
-<strong class="me-auto">Payal Web</strong>
-
-<small>Now</small>
-
-<button type="button"
-class="btn-close"
-data-bs-dismiss="toast"
-aria-label="Close">
-</button>
-
-</div>
-
-<div class="toast-body">
-Great! The interactive feature is working successfully.
-</div>
-
-</div>
-</div>
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-<script src="js/app.js"></script>
-
-</body>
-  </html>
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+  
